@@ -1,0 +1,3 @@
+INDEX VERSION 1.129+C:\Users\APCS1\Documents\GitHub\huangrob_fall2016\.metadata\.plugins\org.eclipse.jdt.core
+231179673.index
+3240577434.index
