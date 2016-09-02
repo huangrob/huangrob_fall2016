@@ -1,0 +1,26 @@
+
+public class Calculate {
+
+	public static double square(double s) {
+		double x;
+		x=s*s;
+		return x;
+	}
+		
+	public static double cube(double c) {
+		double x;
+		x=c*c*c;
+		return x;
+	}
+		
+	public static double average(double x, double y) {
+		double a =(x+y)/2;
+		return a;	
+		
+	public static double average(double p, double q, double r) {
+		double aa =(p+q+r)/3;
+		return aa;
+	}
+	}
+	
+}
