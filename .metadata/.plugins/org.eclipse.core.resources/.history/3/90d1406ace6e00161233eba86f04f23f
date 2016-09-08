@@ -1,0 +1,13 @@
+
+public class DoMath{
+	
+	public static void main(String[] args){
+		
+		double x=Calculate.square(5);
+		System.out.println(y);
+		
+		double y=Calculate.cube(5);
+		
+	}
+
+}
