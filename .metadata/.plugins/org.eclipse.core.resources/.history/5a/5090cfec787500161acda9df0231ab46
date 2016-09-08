@@ -15,11 +15,10 @@ public class Calculate {
 		
 	public static double average(double x, double y) {
 		double a =(x+y)/2;
-		return a;
-	}
-	
-	public static double average(double d, double e, double f) {
-		return (d+e+f)/3;
+		return a;	
+		
+	public static double avera(double i, double j, double k) {
+		return (i+j+k)/3;
 	}
 	
 	public static double toDegrees(double rad) {
@@ -43,17 +42,16 @@ public class Calculate {
 	}
 	
 	public static String toMixedNum(int a, int b){
-		return (a/b + "_" + a%b + "/" + b);
-	
+		return 
 	}
 	
-	public static String foil(int i, int j, int k, int l){
-		return (i*k + "n^2 + " + i*l + j*k + "n" + j*l);
-	}
 	
-	public static boolean isDivisibleBy(int a, int b){
-		return true;
-	}
 	
+	
+	
+	
+	
+
+	}
 	
 }
