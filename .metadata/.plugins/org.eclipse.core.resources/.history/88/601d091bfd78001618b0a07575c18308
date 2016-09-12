@@ -34,7 +34,7 @@ public class Calculate {
 	}
 	
 	public static double discriminant(double a, double b, double c){
-		return b*b + -1*4*a*c;
+		return b*b + 4*a*c;
 	}
 	
 	public static String toImproperFrac(int a, int b, int c){
@@ -48,7 +48,7 @@ public class Calculate {
 	}
 	
 	public static String foil(int i, int j, int k, int l){
-		return (i*k + "n^2 + " + i*l + j*k + "n + " + j*l);
+		return (i*k + "n^2 + " + i*l + j*k + "n" + j*l);
 	}
 	
 	public static boolean isDivisibleBy(int a, int b){
