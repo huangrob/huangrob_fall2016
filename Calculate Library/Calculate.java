@@ -52,8 +52,81 @@ public class Calculate {
 	}
 	
 	public static boolean isDivisibleBy(int a, int b){
-		return true;
+		if (a%b==0){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
+	public static double absValue(double a){
+		return Math.abs(a);
+	}
 	
+	public static int max(int a, int b){
+		  if(a>b){
+			  return a;
+		  }
+		  else{
+			  return b;
+		  }
+	 }
+	
+	public static double max(double a, double b, double c){
+		  if(a>b && a>c){
+			  return a;
+		  }
+
+		  else if(b>a && b>c){
+			  return b;
+		  }
+		  else{
+			  return c;
+		  }
+	}
+
+	public static double min(double a, double b){
+		if(a<b){
+			return a;
+			}
+		else{
+			return b;
+			}
+		}
+	
+	public static double round2 (double a){
+		int answer = ((int)(a * 100));
+		if ((a * 100)-answer >= .5){
+			double roundup = ((int)(a*100)+1)/100.00;
+		    return roundup;  
+		}
+		else {
+			double rounddown = (int)(a*100)/(100.00);
+			return rounddown;
+		}
+	}
+
+	public static double exponent(double a, double b){
+		  double answer = 1.0;
+		  for(int i = 0; i < b; i++){
+			  answer *= a;
+		  }
+		  return answer;
+	}
+
+	public static int factorial(int a){
+		 int answer = 1;
+		 for(int i = 1; i <= a; i++){
+			 answer *= i;
+			 }
+		 return answer;
+	 }
+	public static boolean isPrime(int a){
+		 boolean s = true;
+		 for(int i = 0; i < a; i++){
+			 if(s = Calculate.isDivisibleBy(a, i)){
+			 }
+		 }
+	 }
 }
