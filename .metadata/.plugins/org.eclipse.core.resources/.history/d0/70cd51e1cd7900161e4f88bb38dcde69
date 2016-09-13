@@ -107,7 +107,7 @@ public class Calculate {
 		}
 	}
 
-	public static double exponent(double a, int b){
+	public static double exponent(double a, double b){
 		  double answer = 1.0;
 		  for(int i = 0; i < b; i++){
 			  answer *= a;
@@ -125,12 +125,10 @@ public class Calculate {
 	
 	public static boolean isPrime(int a){
 		 boolean s = true;
-		 boolean r = false;
 		 for(int i = 0; i < a; i++){
-			 if(s = Calculate.isDivisibleBy(i, a)){
-				 return s;
+			 if(s = Calculate.isDivisibleBy(a, i)){
 			 }
-		}
-		 return r;
+		 }
+		 return s;
 	}
 }
