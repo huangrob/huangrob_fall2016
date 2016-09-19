@@ -21,7 +21,7 @@ public class DoMath1 {
 		System.out.println(Calculate.round2(6.449));
 		System.out.println(Calculate.exponent(2.5,2));
 		System.out.println(Calculate.factorial(5));
-		System.out.println(Calculate.isPrime(91));
+		System.out.println(Calculate.isPrime(3));
 		
 		
 	}

@@ -34,7 +34,7 @@ public class Calculate {
 	}
 	
 	public static double discriminant(double a, double b, double c){
-		return b*b + 4*a*c;
+		return b*b + -1*4*a*c;
 	}
 	
 	public static String toImproperFrac(int a, int b, int c){
@@ -48,7 +48,7 @@ public class Calculate {
 	}
 	
 	public static String foil(int i, int j, int k, int l){
-		return (i*k + "n^2 + " + i*l + j*k + "n" + j*l);
+		return (i*k + "n^2 + " + i*l + j*k + "n + " + j*l);
 	}
 	
 	public static boolean isDivisibleBy(int a, int b){
@@ -107,7 +107,7 @@ public class Calculate {
 		}
 	}
 
-	public static double exponent(double a, double b){
+	public static double exponent(double a, int b){
 		  double answer = 1.0;
 		  for(int i = 0; i < b; i++){
 			  answer *= a;
@@ -121,13 +121,16 @@ public class Calculate {
 			 answer *= i;
 			 }
 		 return answer;
-	 }
+	}
+	
 	public static boolean isPrime(int a){
 		 boolean s = true;
-		 for(int i = 0; i < a; i++){
-			 if(s = Calculate.isDivisibleBy(a, i)){
+		 boolean r = false;
+		 for(int i = 2; i < a; i++){
+			 if(s = Calculate.isDivisibleBy(a,i)){
+				 return r;
 			 }
-		 }
-		 return false;
-	 }
+		}
+		 return s;
+	}
 }

@@ -127,10 +127,10 @@ public class Calculate {
 		 boolean s = true;
 		 boolean r = false;
 		 for(int i = 2; i < a; i++){
-			 if(s = Calculate.isDivisibleBy(a,i)){
-				 return s;
+			 if(s = Calculate.isDivisibleBy(i, a)){
+				 return r;
 			 }
 		}
-		 return r;
+		 return s;
 	}
 }

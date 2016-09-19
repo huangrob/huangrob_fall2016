@@ -14,11 +14,15 @@ public class DoMath1 {
 		System.out.println(Calculate.toMixedNum(7,2));
 		System.out.println(Calculate.foil(1,2,3,4));
 		System.out.println(Calculate.isDivisibleBy(1, 2));
-		System.out.println(Calculate.absValue(3.2));
+		System.out.println(Calculate.absValue(-3.2));
 		System.out.println(Calculate.max(3,4));
 		System.out.println(Calculate.max(3,4,5));
 		System.out.println(Calculate.min(3,4));
-		System.out.println(Calculate.round2(6.443));
+		System.out.println(Calculate.round2(6.449));
+		System.out.println(Calculate.exponent(2.5,2));
+		System.out.println(Calculate.factorial(5));
+		System.out.println(Calculate.isPrime(4));
+		
 		
 	}
 }
