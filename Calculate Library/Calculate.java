@@ -124,13 +124,9 @@ public class Calculate {
 	}
 	
 	public static boolean isPrime(int a){
-		 boolean s = true;
-		 boolean r = false;
 		 for(int i = 2; i < a; i++){
 			 if(s = Calculate.isDivisibleBy(a,i)){
-				 return s;
 			 }
-		}
-		 return r;
+		 }
 	}
 }
