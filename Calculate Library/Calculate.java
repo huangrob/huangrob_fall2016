@@ -1,132 +1,188 @@
+//Robert Huang
+//Period 1
+//Due: 9/24/16
+//Math Library
+
 
 public class Calculate {
-
-	public static double square(double s) {
-		double x;
-		x=s*s;
-		return x;
+// This method returns the square of the value passed
+	public static double square(double x) {
+		double square;
+		square = x*x;
+		return square;
 	}
-		
-	public static double cube(double c) {
-		double x;
-		x=c*c*c;
-		return x;
+// This method returns the cube of the value passed		
+	public static double cube(double x) {
+		double cube;
+		cube=x*x*x;
+		return cube;
 	}
-		
-	public static double average(double x, double y) {
-		double a =(x+y)/2;
-		return a;
+// This method returns the average of 2 numbers passed
+	public static double average(double num1, double num2) {
+		double average =(num1+num2)/2;
+		return average;
 	}
-	
-	public static double average(double d, double e, double f) {
-		return (d+e+f)/3;
+// This method returns the average of 3 numbers passed
+	public static double average(double num1, double num2, double num3) {
+		return (num1+num2+num3)/3;
 	}
-	
+//This method converts an angle measure from radians to degrees
 	public static double toDegrees(double rad) {
 		double pi = 3.14159;
 		return rad/pi * 180;
 			
 	}
-	
+// This method converts an angle measure from degrees to radians
 	public static double toRadians(double deg) {
 		double pi = 3.14159;
 		return deg/180 * pi;
 	}
-	
+// This method returns the value of the discriminant with the coefficients of a quadratic equation
 	public static double discriminant(double a, double b, double c){
 		return b*b + -1*4*a*c;
 	}
-	
-	public static String toImproperFrac(int a, int b, int c){
-		return (a * c + b) + "/" + c;
+// This method converts an improper fraction into a mixed number
+	public static String toImproperFrac(int num1, int num2, int num3){
+		return (num1 * num3 + num2) + "/" + num3;
 		
 	}
-	
-	public static String toMixedNum(int a, int b){
-		return (a/b + "_" + a%b + "/" + b);
+// This method converts a mixed number into an improper fraction
+	public static String toMixedNum(int num1, int num2){
+		return (num1/num2 + "_" + num1 % num2 + "/" + num2);
 	
 	}
-	
-	public static String foil(int i, int j, int k, int l){
-		return (i*k + "n^2 + " + i*l + j*k + "n + " + j*l);
+// This method converts a binomial multiplication into a quadratic equation
+	public static String foil(int a, int b, int c, int d){
+		return (a*c + "n^2 + " + a*d + b*c + "n + " + b*d);
 	}
-	
-	public static boolean isDivisibleBy(int a, int b){
-		if (a%b==0){
+// This method determines whether or not one integer is divisible by another
+	public static boolean isDivisibleBy(int num1, int num2){
+		if (num1 % num2 == 0){
 			return true;
 		}
 		else{
 			return false;
 		}
 	}
-	
-	public static double absValue(double a){
-		return Math.abs(a);
+// This method returns the absolute value of the number passed
+	public static double absValue(double number){
+		return Math.abs(number);
 	}
-	
-	public static int max(int a, int b){
-		  if(a>b){
-			  return a;
+// This method returns the larger of the values passed
+	public static int max(int num1, int num2){
+		  if(num1>num2){
+			  return num1;
 		  }
 		  else{
-			  return b;
+			  return num2;
 		  }
 	 }
-	
-	public static double max(double a, double b, double c){
-		  if(a>b && a>c){
-			  return a;
+//This method returns the largest of the values passed
+	public static double max(double num1, double num2, double num3){
+		  if(num1>num2 && num2>num3){
+			  return num1;
 		  }
 
-		  else if(b>a && b>c){
-			  return b;
+		  else if(num2>num1 && num2>num3){
+			  return num2;
 		  }
 		  else{
-			  return c;
+			  return num3;
 		  }
 	}
-
-	public static double min(double a, double b){
-		if(a<b){
-			return a;
+//This method returns the smaller of the values passed
+	public static double min(double num1, double num2){
+		if(num1<num2){
+			return num1;
 			}
 		else{
-			return b;
+			return num2;
 			}
 		}
-	
-	public static double round2 (double a){
-		int answer = ((int)(a * 100));
-		if ((a * 100)-answer >= .5){
-			double roundup = ((int)(a*100)+1)/100.00;
+// This method rounds a double to 2 decimal places
+	public static double round2 (double number){
+		int answer = ((int)(number * 100));
+		if ((number * 100)-answer >= .5){
+			double roundup = ((int)(number*100)+1)/100.00;
 		    return roundup;  
 		}
 		else {
-			double rounddown = (int)(a*100)/(100.00);
+			double rounddown = (int)(number*100)/(100.00);
 			return rounddown;
 		}
 	}
-
-	public static double exponent(double a, int b){
+//This method raises a value to a positive integer power
+	public static double exponent(double num1, int num2){
 		  double answer = 1.0;
-		  for(int i = 0; i < b; i++){
-			  answer *= a;
+		  for(int i = 0; i < num2; i++){
+			  answer *= num1;
 		  }
 		  return answer;
 	}
-
-	public static int factorial(int a){
+//This method returns the factorial of the value passed
+	public static int factorial(int number){
+		if (number < 0) {
+			throw new IllegalArgumentException ("input is less than 0");
+		}
 		 int answer = 1;
-		 for(int i = 1; i <= a; i++){
+		 for(int i = 1; i <= number; i++){
 			 answer *= i;
 			 }
 		 return answer;
 	}
-	
-	public static boolean isPrime(int a){
-		 for(int i = 2; i < a; i++){
-			 if(s = Calculate.isDivisibleBy(a,i)){
-			 }
+//This method determines whether or not an integer is prime
+	public static boolean isPrime(int num1){ 
+		boolean s = true; 
+		for(int i = 2; i < num1; i++) {
+		        s = Calculate.isDivisibleBy(i, num1);
 		 }
+		 return s;
+	}
+//This method finds the greatest common factor of two integers
+	public static int gcf(int num1, int num2){
+		int gcf = 1;
+		if(num1 > num2){
+			for(int i = num2; i >= 1; i--){
+				if(num1 % i == 0 && num2 % i == 0){
+					return i;
+				}
+			}
+		} else {
+			for(int j = num1; j >=1; j--){
+				if(num1 % j == 0 && num2 % j == 0){
+					return j;
+				}
+			}
+		}
+		return gcf;
+	}
+//This method returns approximation of the square root of the value passed
+	public static double sqrt(double number) {
+		if (number < 0){
+			throw new IllegalArgumentException ("input is less than 0");
+		}
+		double var1;
+		double squareRoot = number / 2;
+		do {
+			var1 = squareRoot;
+			squareRoot = (var1 + (number / var1)) / 2;
+		} while ((var1 - squareRoot) != 0);
+		return squareRoot;
+	}
+//This method uses the coefficients of a quadratic formula to approximate the real roots
+	public static String quadForm(int a, int b, int c){
+		double discriminant = Calculate.discriminant(a, b, c);
+		if (discriminant < 0){
+			return "no real roots";
+		}
+		else if (discriminant == 0){
+			double root1 = (-b + discriminant)/(2*a);
+			return "Root = " + root1;
+		}
+		else {
+			double root1 = (-b - discriminant)/(2*a);
+			double root2 = (-b + discriminant)/(2*a);
+			return "Root 1 = " + root1 + "\nRoot 2 = " + root2;
+		}
 	}
 }

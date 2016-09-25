@@ -22,6 +22,11 @@ public class DoMath1 {
 		System.out.println(Calculate.exponent(2.5,2));
 		System.out.println(Calculate.factorial(5));
 		System.out.println(Calculate.isPrime(25));
+		System.out.println(Calculate.gcf(20,36));
+		System.out.println(Calculate.sqrt(8.9));
+		System.out.println(Calculate.quadForm(1,5,2));
+		
+		
 		
 		
 	}
