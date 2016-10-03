@@ -1,0 +1,45 @@
+// import java util
+import java.util.Scanner;
+
+// Robert Huang
+// Due: 10/3/16
+// Period 1
+// Collaborative Programming Code
+
+public class test {
+	public static void main(String[] args) {
+		// Make a new Scanner
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Enter a string of numbers with spaces between them");
+		String numbers = userInput.nextLine();
+		// Gets rid of all the spaces between the int values
+		String[] stringOfInts = numbers.split(" ");
+		int min;
+		int max;
+		int maxEven;
+		int sumEven = 0;
+		// For loop that runs for the length of modified string
+		for(int i = 0; i < stringOfInts.length; i++){
+			// Parse changes the string values to int values
+			int numberAtI = Integer.parseInt(stringOfInts[i]);
+			if(numberAtI > max){
+				max = numberAtI;
+			}
+			if(numberAtI < min){
+				min = numberAtI;
+			}
+			if(numberAtI % 2 == 0){
+				sumEven += numberAtI;
+				if(numberAtI > maxEven){
+					maxEven = numberAtI;
+				}
+			}
+		}
+		// hbPrint out all the required data
+		System.out.println();
+		System.out.println("The largest number is " + max);
+		System.out.println("The smallest number is " +  min);
+		System.out.println("The total of the even numbers " + sumEven);
+		System.out.println("The largest even number is " + maxEven);
+	}
+}

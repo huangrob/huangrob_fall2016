@@ -1,0 +1,30 @@
+
+import java.util.*;
+public class ProcessingNumbers {
+	public static void main (String[] args){
+		int sumEven = 0;
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("How many numbers are you going to import?");
+		int totalNum = userInput.nextInt();
+		for (int num = 1; num <= totalNum; num++){
+			System.out.println("Enter your number: ");
+			int nextNum = userInput.nextInt();
+			int max = nextNum;
+			int min = nextNum;
+			if (nextNum > max){
+				max = nextNum;
+			}
+			else if (nextNum < min){
+				min = nextNum;
+			}
+			if (nextNum % 2 == 0){
+				int maxEven = nextNum;
+				sumEven += nextNum;
+				if (nextNum > maxEven){
+					maxEven = nextNum;
+				}
+			}
+		}
+	}
+
+}
