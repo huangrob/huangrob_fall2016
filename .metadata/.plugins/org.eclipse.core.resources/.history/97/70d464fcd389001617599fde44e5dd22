@@ -39,7 +39,8 @@ public class test {
 			}
 		}
 		// Prints out all the information
-		System.out.println("\nThe largest number: " + max);
+		System.out.println();
+		System.out.println("The largest number: " + max);
 		System.out.println("The smallest number: " +  min);
 		System.out.println("The sum of all even numbers: " + sumEven);
 		System.out.println("The largest even number: " + maxEven);

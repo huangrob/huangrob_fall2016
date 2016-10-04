@@ -1,12 +1,12 @@
 // import java util
 import java.util.Scanner;
 
-// Robert Huang
-// Due: 10/3/16
-// Period 1
-// Collaborative Programming Code
+//Robert Huang
+//Due: 10/3/16
+//Period 1
+//Collaborative Programming Code
 
-public class test {
+public class ProcessingNumber {
 	public static void main(String[] args) {
 		// Makes a new Scanner
 		Scanner userInput = new Scanner(System.in);

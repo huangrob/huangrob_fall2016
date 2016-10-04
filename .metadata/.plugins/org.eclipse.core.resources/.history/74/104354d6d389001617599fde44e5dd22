@@ -11,8 +11,10 @@ public class test {
 		// Makes a new Scanner
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("This program determines your largest number, smallest number, largest even number, and the sum of the even numbers.");
-		System.out.println("How many integers do you want to enter?");
-		int totalNumbers = userInput.nextInt();
+		System.out.println("Enter a string of integers with a comma and space between them: ");
+		String integers = userInput.nextLine();
+		// Splits the string into the integer values
+		String[] stringInts = integers.split(", ");
 		// Declares min as the largest integer value possible
 		// Ensures that the user's input is smaller than the initialized integer
 		int min = Integer.MAX_VALUE;
@@ -21,10 +23,10 @@ public class test {
 		int max = Integer.MIN_VALUE;
 		int maxEven = Integer.MIN_VALUE;
 		int sumEven = 0;
-		// For loop that runs for the number of inputs
-		for(int i = 1; i <= totalNumbers; i++){
-			System.out.println("Enter your integer: ");
-			int userNum = userInput.nextInt();
+		// For loop that runs for the length of the string of integers
+		for(int i = 0; i < stringInts.length; i++){
+			// Parse converts string to integers
+			int userNum = Integer.parseInt(stringInts[i]);
 			if (userNum > max){
 				max = userNum;
 			}
@@ -39,7 +41,8 @@ public class test {
 			}
 		}
 		// Prints out all the information
-		System.out.println("\nThe largest number: " + max);
+		System.out.println();
+		System.out.println("The largest number: " + max);
 		System.out.println("The smallest number: " +  min);
 		System.out.println("The sum of all even numbers: " + sumEven);
 		System.out.println("The largest even number: " + maxEven);
