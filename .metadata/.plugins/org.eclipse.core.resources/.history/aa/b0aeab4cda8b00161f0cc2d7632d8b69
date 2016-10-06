@@ -20,22 +20,11 @@ public class Magpie2 {
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else if (statement.indexOf("mr") >= 0) {
-			response = "He sounds like a good teacher.";
-		} else if (statement.indexOf("ms") >= 0
-				|| statement.indexOf("mrs") >= 0) {
-			response = "She sounds like a good teacher.";
-		} else if (statement.indexOf("answer to life") >= 0) {
-			response = "42";
-		} else if (statement.indexOf("pikachu") >= 0) {
-			response = "Pikachu welcomes you to the world of Pokemon!\n\t\t(\\__/)\n\t\t(o^.^)\n\t       z(____)";
-		}
-		else {
+		} else {
 			response = getRandomResponse();
 		}
 		return response;
 	}
-	
 
 	/**
 	 * Pick a default response to use if nothing else fits.

@@ -25,10 +25,6 @@ public class Magpie2 {
 		} else if (statement.indexOf("ms") >= 0
 				|| statement.indexOf("mrs") >= 0) {
 			response = "She sounds like a good teacher.";
-		} else if (statement.indexOf("answer to life") >= 0) {
-			response = "42";
-		} else if (statement.indexOf("pikachu") >= 0) {
-			response = "Pikachu welcomes you to the world of Pokemon!\n\t\t(\\__/)\n\t\t(o^.^)\n\t       z(____)";
 		}
 		else {
 			response = getRandomResponse();
