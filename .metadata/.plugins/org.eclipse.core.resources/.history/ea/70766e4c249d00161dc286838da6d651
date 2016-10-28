@@ -18,21 +18,21 @@ public class Split
 		//all bread
 		middleBread("breadbreadbread");
 		
-		middleBreadSpace("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
+		//middleBreadSpace("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 	public static void middleBread(String bread){
 		bread = "apples" + bread + "apples";
 		String[] bread1 = bread.split("bread");
 		String[] bread2 = new String[bread1.length];
 		if (bread1.length > 2){
-			for(int i = 0; i < bread1.length; i++){
-				bread2[i] = bread1[i] + ", ";
-			}
-			String[] bread3 = Arrays.toString(bread2).split(", ");
-			for(int j = 1; j <= bread2.length; j++){
-				System.out.print(bread3[j]);
-			}
-			System.out.println();
+		for(int i = 0; i < bread1.length; i++){
+			bread2[i] = bread1[i] + ", ";
+		}
+		String[] bread3 = Arrays.toString(bread2).split(", ");
+		for(int j = 1; j <= bread2.length; j++){
+			System.out.print(bread3[j]);
+		}
+		System.out.println();
 		}
 		else{
 			System.out.println("you don't have a sandwich");

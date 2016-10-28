@@ -5,34 +5,38 @@ public class Split
 
 	public static void main(String[] args) 
 	{
-		//1 piece of bread
+		//String.split();
+		//It's a method that acts on a string, <StringName>.split(<String sp>);
+		//Where sp is the string where the string splits
+		//And it returns an array
+		System.out.println(Arrays.toString("I like apples!".split(" ")));
+		// Example: "I like apples!".split(" "); 
+		//		it will split at spaces and return an array of ["I","like","apples!"]
+		// Example 2: "I really like really red apples"split("really")
+		//		it will split at the word "really" and return an array of ["I "," like "," apples!"]
+		System.out.println(Arrays.toString("I really like really red apples!".split("really")));
+		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
+		System.out.println(Arrays.toString("I reallyreally like apples".split("really")));
+		middleBread("applespineapplesbreadlettustomatobaconmayohambreadcheese");
 		middleBread("lettustomatobaconmayohambreadcheese");
 		middleBread("applespineapplesbreadlettustomatobaconmayoham");
-		//2 pieces of bread
-		middleBread("applespineapplesbreadlettustomatobaconmayohambreadcheese");
-		//3 pieces of bread
 		middleBread("applespineapplesbreadlettustomatobaconmayohambreadcheesebreadcheese");
 		middleBread("applespineapplesbreadlettustomatobaconmayohambreadcheesebread");
-		//start and end with bread
 		middleBread("breadapplesbread");
-		//all bread
-		middleBread("breadbreadbread");
-		
 		middleBreadSpace("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 	public static void middleBread(String bread){
-		bread = "apples" + bread + "apples";
 		String[] bread1 = bread.split("bread");
 		String[] bread2 = new String[bread1.length];
 		if (bread1.length > 2){
-			for(int i = 0; i < bread1.length; i++){
-				bread2[i] = bread1[i] + ", ";
-			}
-			String[] bread3 = Arrays.toString(bread2).split(", ");
-			for(int j = 1; j <= bread2.length; j++){
-				System.out.print(bread3[j]);
-			}
-			System.out.println();
+		for(int i = 0; i < bread1.length; i++){
+			bread2[i] = bread1[i] + ", ";
+		}
+		String[] bread3 = Arrays.toString(bread2).split(", ");
+		for(int j = 1; j <= bread2.length; j++){
+			System.out.print(bread3[j] + " ");
+		}
+		System.out.println();
 		}
 		else{
 			System.out.println("you don't have a sandwich");
